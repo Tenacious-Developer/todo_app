@@ -21,8 +21,21 @@ addBtn.addEventListener("click", function () {
     completeBtn.disabled = true;
   });
 
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.className = "delete-btn";
+
+  deleteBtn.addEventListener("click", function () {
+    li.remove();
+  });
+
+  const actions = document.createElement("div");
+  actions.className = "actions";
+  actions.appendChild(completeBtn);
+  actions.appendChild(deleteBtn);
+
   li.appendChild(span);
-  li.appendChild(completeBtn);
+  li.appendChild(actions);
   taskList.appendChild(li);
 
   taskInput.value = "";
