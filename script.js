@@ -7,7 +7,22 @@ addBtn.addEventListener("click", function () {
   if (text === "") return;
 
   const li = document.createElement("li");
-  li.textContent = text;
+
+  const span = document.createElement("span");
+  span.textContent = text;
+
+  const completeBtn = document.createElement("button");
+  completeBtn.textContent = "Completed";
+  completeBtn.className = "complete-btn";
+
+  completeBtn.addEventListener("click", function () {
+    span.textContent = "* " + text;
+    span.classList.add("completed");
+    completeBtn.disabled = true;
+  });
+
+  li.appendChild(span);
+  li.appendChild(completeBtn);
   taskList.appendChild(li);
 
   taskInput.value = "";

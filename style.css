@@ -49,6 +49,28 @@ h1 {
 }
 
 #taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 8px;
   border-bottom: 1px solid #eee;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.complete-btn {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+
+.complete-btn:disabled {
+  background: #aaa;
+  cursor: default;
 }
