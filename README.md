@@ -6,6 +6,7 @@ A simple todo list built with plain HTML, CSS and JavaScript. No frameworks or b
 
 - **Add tasks:** type a task and click **Add**. Empty input is ignored.
 - **Complete tasks:** click **Completed** to put a `*` in front of the task and cross it out. The button is then disabled.
+- **Edit tasks:** click **Edit** to change a task's text, then click **Save** (or press Enter). Saving an empty value keeps the old text.
 - **Delete tasks:** click **Delete** to remove a task from the list.
 
 Tasks are not saved, so the list is cleared when you refresh the page.
@@ -21,7 +22,7 @@ Tasks are not saved, so the list is cleared when you refresh the page.
 todo/
 ├── index.html   # Page layout: input, Add button and task list
 ├── style.css    # Styling
-├── script.js    # Add, complete and delete logic
+├── script.js    # Add, complete, edit and delete logic
 └── .gitignore   # Keeps .env files out of git
 ```
 
